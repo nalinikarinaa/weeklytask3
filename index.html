@@ -9,82 +9,102 @@
 </head>
 
 <body>
-<div class="flex flex-col md:flex-row h-screen ">
+  <div class="flex flex-col md:flex-row min-h-screen">
     <!-- Bagian Kiri -->
-    <div class="md:w-1/2 bg-black flex text-white relative">
-        <header class="absolute top-0 left-0 bg-transparent">
-            <div class="container mx-auto md:px-32 px-14 py-8 flex">
-                <img class="md:w-auto w-40 h-5 mb-10" src="/img/logoo 1.svg" alt="Logo">
-            </div>
-        </header>
-        <div class="mt-28">
-            <h1 class="md:text-5xl text-3xl font-playfair mb-16 md:ml-32 ml-20">We’d love to <br> hear from you</h1>
-            <div class="relative inset-0 justify-center items-center flex">
-              <img class="w-[100vw] h-auto ml-1 relative" src="/img/tengah.png" alt="Gambar Tengah">
-            </div>
+    <div class="md:w-1/2 bg-black flex flex-col justify-between text-white relative min-h-screen">
+      <!-- Header -->
+      <header class="absolute top-0 left-0 bg-transparent">
+          <div class="container mx-auto md:px-32 px-14 py-8 flex">
+              <img class="md:w-auto w-40 h-5 mb-10" src="/img/logoo 1.svg" alt="Logo">
+          </div>
+      </header>
 
-           <!-- konten bawah -->
-           <div class="flex text-center items-center justify-center mt-16 mb-4 md:ml-28 md:bottom-10 md:fixed">
-        <img class="md:w-14 w-8 h-auto ml-2 mb-2" src="/img/bawah.png" alt="">
-        <p class="text-xs text-gray-400 md:ml-4 ml-0">Privacy Policy • Modern Day Statement • Social Impact Statement</p>
+      <!-- Konten Utama -->
+      <div class="mt-28">
+          <h1 class="md:text-5xl text-4xl font-playfair mb-20 md:mb-16 md:ml-32 ml-20">We’d love to <br> hear from you</h1>
+          <div class="relative inset-0 justify-center items-center flex">
+              <!-- Ganti w-[100vw] dengan w-full untuk memastikan gambar tidak overflow -->
+              <img class="w-full h-auto ml-1 relative" src="/img/tengah.png" alt="Gambar Tengah">
+          </div>
       </div>
+
+      <!-- Konten Bawah -->
+      <div class="my-4 text-xs flex flex-row items-center justify-center relative mt-4">
+        <div class="flex relative mb-5 md:mb-0">
+          <img class="md:w-14 w-8 h-auto ml-2 mb-2" src="/img/bawah.png" alt="">
         </div>
+        <p class="mb-4 md:mb-2 text-xs text-gray-500 ml-3">Privacy Policy • Modern Day Statement • Social Impact Statement</p>
+      </div>
     </div>
 
     <!-- Bagian Kanan -->
-    <div class="md:w-1/2 bg-white flex flex-col items-center justify-start relative"> 
-        <header id="header" class="absolute top-0 right-0 bg-transparent">
-            <div class="justify-between gap-30 flex md:text-base text-xs  mt-5 md:mr-14 mr-8">
-                <a class="py-3 px-4 text-black focus:border-2 focus:border-black active:border-2 active:border-black focus:outline-none" href="#aboutus">About</a>
-                <a class="py-3 px-4 text-black focus:border-2 focus:border-black active:border-2 active:border-black focus:outline-none" href="#services">Services</a>
-                <a class="py-3 px-4 text-black focus:border-2 focus:border-black active:border-2 active:border-black focus:outline-none" href="#home">Contact us</a>
-            </div>
-        </header>
-    
-        <div class="text-left p-8 md:mt-20 mt-10 w-full ">
-            <h2 class="md:text-4xl text-2xl font-bold md:mb-12 mb-4 font-playfair md:mx-14 mx-4">Contact us</h2>
-            <div class="md:grid md:grid-cols-2 gap-4 md:mx-14 mx-4">
-                <div class="flex flex-col">
-                  <label for="first-name" class="md:text-base text-sm text-black">First Name</label>
-                  <input id="first-name" type="text" placeholder="Enter your first name" class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
-                </div>
-                <div class="flex flex-col">
-                  <label for="last-name" class="md:text-base text-sm text-black mt-2 md:mt-0">Last Name</label>
-                  <input id="last-name" type="text" placeholder="Enter your last name" class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
-                </div>
-                <div class="flex flex-col">
-                  <label for="email" class="md:text-base text-sm text-black mt-2 md:mt-0">Email</label>
-                  <input id="email" type="email" placeholder="Enter your email" class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
-                </div>
-                <div class="flex flex-col">
-                  <label for="phone-number" class="md:text-base text-sm text-black mt-2 md:mt-0">Phone Number</label>
-                  <input id="phone-number" type="text" placeholder="Enter your phone number" class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
-                </div>
-                <div class="col-span-2 flex flex-col">
-                  <label for="message" class="md:text-base text-sm text-black mt-2 md:mt-0">Message</label>
-                  <input id="message" placeholder="Enter your message" class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
-                </div>
-                <button class="flex items-center text-black text-sm md:text-base hover:text-gray-400 focus:outline-none mt-3">
-                    Submit
-                    <span class="ml-1 text-black text-3xl hover:text-gray-400 focus:outline-none">→</span>
-                  </button>
-              </div>
-              <div class="md:mx-14 mx-4 md:mt-10 mt-5 md:text-base text-sm">
-              <p class="text-gray-600">Email Us </p>
-              <p>enquires@glassmoon.co</p>
-              </div>
+<div class="md:w-1/2 bg-white flex flex-col min-h-screen">
+  <header id="header" class="top-0 right-0 bg-transparent md:absolute md:bg-transparent">
+    <div class="justify-center md:justify-between gap-4 md:gap-30 flex text-xs md:text-base mt-5 md:mr-14 mr-2">
 
-              <!-- konten bawah -->
-              <div class="text-gray-400 text-xs md:mr-20 text-end md:mt-32 mt-10 md:bottom-16 right-0 w-full md:fixed">
-                <span>enquires@glassmoon.co</span>
-                <span class="md:ml-3">Instagram</span>
-                <span class="md:ml-3">Facebook</span>
-              </div>
-              
-
-        </div>
+        <a class="py-3 px-4 text-black focus:border-2 focus:border-black active:border-2 active:border-black focus:outline-none" href="#aboutus">About</a>
+        <a class="py-3 px-4 text-black focus:border-2 focus:border-black active:border-2 active:border-black focus:outline-none" href="#services">Services</a>
+        <a class="py-3 px-4 text-black focus:border-2 focus:border-black active:border-2 active:border-black focus:outline-none" href="#home">Contact us</a>
     </div>
+  </header>
+
+<!-- Wrapper Konten Utama & Footer -->
+<div class="flex flex-col min-h-screen w-full">
+  <!-- Konten Utama -->
+  <div class="flex-grow text-left p-8 md:mt-20 mt-2 w-full mb-5">
+      <h2 class="md:text-4xl text-2xl font-bold md:mb-12 mb-4 font-playfair md:mx-14 mx-4">
+          Contact us
+      </h2>
+      <div class="md:grid md:grid-cols-2 gap-4 md:mx-14 mx-4">
+          <div class="flex flex-col">
+              <label for="first-name" class="md:text-base text-sm text-black">First Name</label>
+              <input id="first-name" type="text" placeholder="Enter your first name" 
+                     class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
+          </div>
+          <div class="flex flex-col">
+              <label for="last-name" class="md:text-base text-sm text-black mt-2 md:mt-0">Last Name</label>
+              <input id="last-name" type="text" placeholder="Enter your last name" 
+                     class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
+          </div>
+          <div class="flex flex-col">
+              <label for="email" class="md:text-base text-sm text-black mt-2 md:mt-0">Email</label>
+              <input id="email" type="email" placeholder="Enter your email" 
+                     class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
+          </div>
+          <div class="flex flex-col">
+              <label for="phone-number" class="md:text-base text-sm text-black mt-2 md:mt-0">Phone Number</label>
+              <input id="phone-number" type="text" placeholder="Enter your phone number" 
+                     class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
+          </div>
+          <div class="col-span-2 flex flex-col">
+              <label for="message" class="md:text-base text-sm text-black mt-2 md:mt-0">Message</label>
+              <input id="message" placeholder="Enter your message" 
+                     class="border-b border-gray-400 focus:outline-none focus:border-black p-2 pl-0 text-sm">
+          </div>
+          <button class="flex items-center text-black text-sm md:text-base hover:text-gray-400 focus:outline-none mt-3">
+              Submit
+              <span class="ml-1 text-black text-3xl hover:text-gray-400 focus:outline-none">→</span>
+          </button>
+      </div>
+
+      <div class="md:mx-14 mx-4 md:mt-10 mt-5 md:text-base text-sm">
+          <p class="text-gray-600">Email Us</p>
+          <p>enquires@glassmoon.co</p>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="text-gray-400 md:text-sm text-xs md:pr-20 pr-6 mr-4 text-end pt-1 w-full pb-10 md:pb-10">
+      <span>enquires@glassmoon.co</span>
+      <span class="md:ml-3 ml-2">Instagram</span>
+      <span class="md:ml-3 ml-2">Facebook</span>
+  </div>
 </div>
+
+
+
 </div>
+  </div>
+
 </body>
 </html>
