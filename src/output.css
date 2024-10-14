@@ -903,6 +903,16 @@ video {
   outline-offset: 2px;
 }
 
+.focus\:placeholder\:text-black:focus::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.focus\:placeholder\:text-black:focus::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .active\:border-2:active {
   border-width: 2px;
 }
